@@ -11,23 +11,19 @@
         android:label="Main Screen"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/actionGameFragment"
-            app:destination="@id/gameFragment"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@anim/nav_default_enter_anim" />
+            android:id="@+id/action_mainFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
         android:name="id.ac.ubaya.adv160419107week2.GameFragment"
-        android:label="Game Screen"
+        android:label="fragment_game"
         tools:layout="@layout/fragment_game" >
         <action
-            android:id="@+id/actionMainFragment"
-            app:destination="@id/mainFragment"
-            app:enterAnim="@anim/nav_default_pop_enter_anim"
-            app:exitAnim="@android:anim/slide_out_right" />
+            android:id="@+id/action_gameFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
         <argument
-            android:name="playerName"
-            app:argType="string" />
+            android:name="skorAkhir"
+            app:argType="integer" />
     </fragment>
 </navigation>

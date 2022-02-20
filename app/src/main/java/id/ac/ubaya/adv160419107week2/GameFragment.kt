@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_game.*
+import kotlinx.android.synthetic.main.fragment_main.*
 
 class GameFragment : Fragment() {
 
@@ -21,14 +22,24 @@ class GameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
-            val playerName = GameFragmentArgs.fromBundle(requireArguments()).playerName
-            // Menampilkan di tempat yang sesuai
-            textTurn.text = "$playerName's Turn"
+//            val playerName = GameFragmentArgs.fromBundle(requireArguments()).skorAkhir
+//            // --Menampilkan di tempat yang sesuai
+//            textTurn.text = "$playerName's Turn"
+
+            val skorTerakir  = GameFragmentArgs.fromBundle(requireArguments()).skorAkhir
+            // --Menampilkan di tempat yang sesuai
+            playerScore.text = "Your score is $skorTerakir"
         }
         buttonBack.setOnClickListener {
-            val action= GameFragmentDirections.actionMainFragment()
+//            val action= GameFragmentDirections.actionMainFragment()
+//            Navigation.findNavController(it).navigate(action)
+            val action= GameFragmentDirections.actionGameFragmentToMainFragment()
             Navigation.findNavController(it).navigate(action)
+
+
         }
+
+
     }
 
 
