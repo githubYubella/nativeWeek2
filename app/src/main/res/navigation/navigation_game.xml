@@ -3,16 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_game"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/itemHome">
 
     <fragment
-        android:id="@+id/mainFragment"
+        android:id="@+id/itemHome"
         android:name="id.ac.ubaya.adv160419107week2.MainFragment"
         android:label="Main Screen"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_itemHome_to_optionFragment"
+            app:destination="@id/actionOptionFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -21,9 +24,26 @@
         tools:layout="@layout/fragment_game" >
         <action
             android:id="@+id/action_gameFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/itemHome"
+            app:popUpTo="@id/itemHome"
+            app:popUpToInclusive="true" />
         <argument
             android:name="skorAkhir"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/itemHistory"
+        android:name="id.ac.ubaya.adv160419107week2.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="id.ac.ubaya.adv160419107week2.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <dialog
+        android:id="@+id/actionOptionFragment"
+        android:name="id.ac.ubaya.adv160419107week2.OptionFragment"
+        android:label="fragment_option"
+        tools:layout="@layout/fragment_option" />
 </navigation>

@@ -51,13 +51,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="200dp"
             app:hintAnimationEnabled="true"
             app:hintEnabled="true"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputName">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputAnswer"
@@ -81,48 +81,58 @@
             android:id="@+id/num1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="112dp"
-            android:layout_marginBottom="52dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="29dp"
             android:text="X"
             android:textSize="34sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputName" />
 
         <TextView
             android:id="@+id/num2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="120dp"
-            android:layout_marginBottom="52dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="116dp"
             android:text="Y"
             android:textSize="34sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputName" />
 
         <TextView
             android:id="@+id/num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:layout_marginBottom="52dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="28dp"
             android:text="+"
             android:textSize="34sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-            app:layout_constraintStart_toEndOf="@+id/num1" />
+            app:layout_constraintStart_toEndOf="@+id/num1"
+            app:layout_constraintTop_toBottomOf="@+id/inputName" />
 
         <TextView
             android:id="@+id/textScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="160dp"
-            android:layout_marginBottom="48dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="148dp"
             android:text="score"
             android:textSize="34sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+        <Button
+            android:id="@+id/btnOption"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="OPTION"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputName" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

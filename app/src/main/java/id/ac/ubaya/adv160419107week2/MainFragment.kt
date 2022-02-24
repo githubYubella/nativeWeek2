@@ -30,6 +30,10 @@ class MainFragment : Fragment() {
 //            // Jalankan action tersebut
 //            Navigation.findNavController(it).navigate(action)
         }
+        btnOption.setOnClickListener {
+            val action = MainFragmentDirections.actionItemHomeToOptionFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
 
 
 //        --Random
